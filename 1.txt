@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneEarth Care Movement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="bg-green-600 text-white font-bold w-12 h-12 flex items-center justify-center rounded-full">OE</div>
+        <div>
+          <h1 class="text-2xl font-bold">OneEarth Care Movement</h1>
+          <p class="text-gray-500">Community • Care • Climate</p>
+        </div>
+      </div>
+      <nav class="space-x-4 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#join" class="hover:underline">Join</a>
+        <a href="#donate" class="hover:underline">Donate</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+    <!-- Hero Section -->
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-4">OneEarth Care Movement</h2>
+        <p class="text-gray-700 mb-6">আমরা সমাজের দরিদ্র, অসহায় এবং পিছিয়ে পড়া মানুষের জন্য কাজ করি। শিক্ষা, স্বাস্থ্য, পরিবেশ, এবং দুর্যোগ সহায়তার মাধ্যমে আমরা সমাজকে আরও সুন্দর এবং নিরাপদ করি।</p>
+        <div class="flex gap-4">
+          <a href="#join" class="px-4 py-2 bg-green-600 text-white rounded shadow">সদস্য হও</a>
+          <a href="#donate" class="px-4 py-2 border border-green-600 text-green-600 rounded">ডোনেট করো</a>
+        </div>
+        <p class="mt-4 text-gray-500">সদস্য সংখ্যা: <span id="membersCount" class="font-semibold">0</span></p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/400x300" alt="OneEarth" class="rounded shadow" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white p-6 rounded shadow space-y-4">
+      <h3 class="text-2xl font-semibold mb-2">আমাদের সম্পর্কে</h3>
+      <p>OneEarth Care Movement সমাজের দরিদ্র ও পিছিয়ে পড়া মানুষের জন্য কাজ করে। আমরা শিক্ষা, স্বাস্থ্য, পরিবেশ, দুর্যোগ সাহায্য, এবং নারীর ক্ষমতায়ন নিয়ে কাজ করি।</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>শিক্ষা ও স্বাস্থ্য বৃদ্ধি</li>
+        <li>পরিবেশ সুরক্ষা ও বৃক্ষরোপণ</li>
+        <li>ত্রাণ ও দুর্যোগ সহায়তা</li>
+        <li>স্থানীয় যুব উন্নয়ন</li>
+      </ul>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="bg-white p-6 rounded shadow space-y-4">
+      <h3 class="text-2xl font-semibold mb-2">Founders</h3>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Ajimul Hossain — President</li>
+        <li>Roni Sk. — Vice President</li>
+        <li>Rick Das — Secretary</li>
+        <li>Firoj Sk. — Joint Secretary</li>
+        <li>Shibim Karamarak — Treasurer</li>
+        <li>Raja Mondal — Executive Member</li>
+        <li>Rohit Hasan — Executive Member</li>
+      </ul>
+    </section>
+
+    <!-- Join Form -->
+    <section id="join" class="bg-white p-6 rounded shadow space-y-4">
+      <h3 class="text-2xl font-semibold mb-2">সদস্য যোগদান ফর্ম</h3>
+      <form id="memberForm" class="space-y-3">
+        <input type="text" id="name" placeholder="পূর্ণ নাম" class="w-full border px-3 py-2 rounded" required />
+        <input type="text" id="phone" placeholder="মোবাইল নম্বর" class="w-full border px-3 py-2 rounded" required />
+        <input type="text" id="father" placeholder="পিতা/স্বামীর নাম (ঐচ্ছিক)" class="w-full border px-3 py-2 rounded" />
+        <input type="text" id="address" placeholder="ঠিকানা" class="w-full border px-3 py-2 rounded" />
+        <input type="text" id="aadhaar" placeholder="Aadhaar (ঐচ্ছিক)" class="w-full border px-3 py-2 rounded" />
+        <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded shadow">যোগদান করো</button>
+        <button type="button" id="exportBtn" class="px-4 py-2 border border-green-600 text-green-600 rounded">CSV এক্সপোর্ট</button>
+        <p id="formMsg" class="text-green-600 mt-2"></p>
+      </form>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="bg-white p-6 rounded shadow space-y-4">
+      <h3 class="text-2xl font-semibold mb-2">ডোনেট (₹5 / দিন)</h3>
+      <p>প্রতিদিন ৫ টাকা দিলে অনেক মানুষকে সাহায্য করা সম্ভব। নিচের QR স্ক্যান করে ডোনেট করো বা UPI ID ব্যবহার করো।</p>
+      <div class="flex flex-col items-center gap-4">
+        <img src="https://via.placeholder.com/200" alt="UPI QR" class="rounded shadow" />
+        <p>UPI ID: <span id="upiId" class="font-semibold">oneearth@upi</span></p>
+        <button id="copyUpi" class="px-4 py-2 bg-green-600 text-white rounded">Copy UPI</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white p-6 rounded shadow space-y-2">
+      <h3 class="text-2xl font-semibold mb-2">যোগাযোগ</h3>
+      <p>অফিস: গ্রাম: বহরমপুর, পোস্ট: বিন্দারপুর, থানা: ভরতপুর</p>
+      <p>ইমেইল: <a href="mailto:oneearth@example.org" class="text-green-600">oneearth@example.org</a> | ফোন: +91 00000 00000</p>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-gray-500 text-sm py-4">
+    © <span id="year"></span> OneEarth Care Movement — All rights reserved
+  </footer>
+
+  <script>
+    const membersKey = 'oneearth_members_local_v1';
+    const membersCount = document.getElementById('membersCount');
+    const form = document.getElementById('memberForm');
+    const formMsg = document.getElementById('formMsg');
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
+
+    function loadMembers() {
+      try { return JSON.parse(localStorage.getItem(membersKey) || '[]') } 
+      catch { return [] }
+    }
+    function saveMembers(list) { localStorage.setItem(membersKey, JSON.stringify(list)) }
+    function renderCount() { membersCount.textContent = loadMembers().length }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const father = document.getElementById('father').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const aadhaar = document.getElementById('aadhaar').value.trim();
+      if(!name || !phone){ formMsg.textContent='নাম ও মোবাইল দিন'; return; }
+      const members = loadMembers();
+      const newM = { id: Date.now(), name, father, address, phone, aadhaar, joinedAt: new Date().toISOString() };
+      members.unshift(newM);
+      saveMembers(members);
+      renderCount();
+      formMsg.textContent='ধন্যবাদ — সদস্যপদ যুক্ত হয়েছে';
+      form.reset();
+      setTimeout(()=>formMsg.textContent='',2500);
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', ()=>{
+      const members = loadMembers();
+      if(!members.length){ alert('কোনো সদস্য নেই'); return; }
+      const header = ['ID','Name','Father','Address','Phone','Aadhaar','JoinedAt'];
+      const rows = members.map(m => [m.id,m.name,m.father,m.address,m.phone,m.aadhaar,m.joinedAt]);
+      const csv = [header,...rows].map(r=>r.map(c=>"${c||''}").join(',')).join('\n');
+      const blob = new Blob([csv], {type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'oneearth_members.csv'; a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('copyUpi').addEventListener('click', ()=>{
+      const upi = document.getElementById('upiId').textContent;
+      navigator.clipboard?.writeText(upi).then(()=> alert('UPI ID copied: '+upi)).catch(()=> alert('Copy failed, please copy manually'));
+    });
+
+    renderCount();
+  </script>
+
+</body>
+</html>
